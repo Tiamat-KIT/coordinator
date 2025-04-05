@@ -83,6 +83,36 @@
 | `/api/suggestions/:id` | GET | 提案されたコーデ詳細 |
 | `/api/suggestions/:id/save` | POST | 提案コーデをお気に入りに保存（Outfitとして登録） |
 
+```mermaid
+graph TD
+  A[トップページ<br>/] --> B[ログインページ<br>/login]
+  A --> C[新規登録ページ<br>/signup]
+  B --> D[マイコーデ一覧ページ<br>/dashboard]
+  C --> D
+  A -->|ログイン済みなら| D
+
+  D --> E[コーデ詳細ページ<br>/outfits/[id]]
+  D --> F[新規コーデ作成ページ<br>/outfits/new]
+  D --> G[服一覧ページ<br>/closet]
+  D --> H[コーデ提案ページ<br>/suggestions]
+
+  E --> F[コーデ編集ページ<br>/outfits/[id]/edit]
+  E --> D
+
+  F --> D
+
+  G --> I[衣服詳細ページ<br>/closet/[id]]
+  G --> J[新規衣服登録ページ<br>/closet/new]
+
+  I --> J[衣服編集ページ<br>/closet/[id]/edit]
+  I --> G
+
+  J --> G
+
+  H --> K[提案コーデ詳細ページ<br>/suggestions/[id]]
+  K --> D[保存 → コーデ一覧へ]
+
+```
 
 
 
