@@ -30,3 +30,31 @@
 - 作成提案
 - 似合いそうな服の提案
 - SNS共有機能
+
+## 技術スタック
+### フロントエンド
+- UI構築
+- ページルーティング
+- API呼び出し
+- 画像アップロード画面などの操作UI
+
+### バックエンド
+- ユーザ認証（Devise + JWTなど）
+- 衣服データ、コーディネートデータの管理
+- コーデ提案ロジック
+- データベースの操作（Active Record）
+
+### データベース
+- PostgreSQL
+- 衣服、ユーザ、コーディネートなどのテーブル
+
+### 画像保存
+- Cloudinary や AWS S3（Next.js → Rails → Cloudにアップロード）
+
+### 認証・セキュリティ
+- Rails側：Devise + devise-jwt でトークンベースの認証
+- Next.js側：ログイン時にJWTを取得 → Authorization: Bearer xxx ヘッダーでAPI通信
+
+
+
+
