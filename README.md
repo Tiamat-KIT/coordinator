@@ -85,32 +85,31 @@
 
 ```mermaid
 graph TD
-  A[トップページ<br />/] --> B[ログインページ<br />/login]
-  A --> C[新規登録ページ<br />/signup]
-  B --> D[マイコーデ一覧ページ<br />/dashboard]
+  A[トップページ /] --> B[ログインページ /login]
+  A --> C[新規登録ページ /signup]
+  B --> D[マイコーデ一覧 /dashboard]
   C --> D
-  A -->|ログイン済みなら| D
+  A -->|ログイン済み| D
 
-  D --> E[コーデ詳細ページ<br />/outfits/[id]]
-  D --> F[新規コーデ作成ページ<br />/outfits/new]
-  D --> G[服一覧ページ<br />/closet]
-  D --> H[コーデ提案ページ<br />/suggestions]
+  D --> E[コーデ詳細 /outfits/:id]
+  D --> F[コーデ作成 /outfits/new]
+  D --> G[服一覧 /closet]
+  D --> H[コーデ提案 /suggestions]
 
-  E --> F[コーデ編集ページ<br />/outfits/[id]/edit]
+  E --> F2[コーデ編集 /outfits/:id/edit]
+  F2 --> D
+  F --> D
   E --> D
 
-  F --> D
-
-  G --> I[衣服詳細ページ<br />/closet/[id]]
-  G --> J[新規衣服登録ページ<br />/closet/new]
-
-  I --> J[衣服編集ページ<br />/closet/[id]/edit]
+  G --> I[服詳細 /closet/:id]
+  G --> J[服登録 /closet/new]
+  I --> J2[服編集 /closet/:id/edit]
+  J2 --> G
   I --> G
-
   J --> G
 
-  H --> K[提案コーデ詳細ページ<br />/suggestions/[id]]
-  K --> D[保存 → コーデ一覧へ]
+  H --> K[提案詳細 /suggestions/:id]
+  K --> D
 
 ```
 
