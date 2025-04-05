@@ -55,6 +55,10 @@
 - Rails側：Devise + devise-jwt でトークンベースの認証
 - Next.js側：ログイン時にJWTを取得 → Authorization: Bearer xxx ヘッダーでAPI通信
 
-
-
+## データベース設定
+### ユーザ
+###　服
+### コーディネート
+### コーディネートを構成する服
+### お気にのコーデ
 
