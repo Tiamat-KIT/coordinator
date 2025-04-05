@@ -57,8 +57,34 @@
 
 ## データベース設定
 ### ユーザ
-###　服
+### 服
 ### コーディネート
 ### コーディネートを構成する服
 ### お気にのコーデ
+
+## APIエンドポイント設計
+### Rails側
+| パス | メソッド | 説明 |
+| --- | --- | --- |
+| `/api/signup` | POST | ユーザ登録 |
+| `/api/login` | POST | ログイン（JWT発行） |
+| `/api/profile` | GET | 自分のユーザデータを取得（認証を要求） |
+| `/api/clothing` | GET | 自分の衣服一覧 |
+| `/api/clothing/:id` | GET | 衣服詳細 |
+| `/api/clothing` | POST | 衣服の新規登録 |
+| `/api/clothing/:id` | PUT/PATCH | 衣服の編集 |
+| `/api/clothing/:id` | DELETE | 衣服の削除 |
+| `/api/outfits` | GET | 自分のコーデ一覧 |
+| `/api/outfits/:id` | GET | コーデ詳細 |
+| `/api/outfits` | POST | コーデの作成 |
+| `/api/outfits/:id` | PUT/PATCH | コーデの編集 |
+| `/api/outfits/:id` | DELETE | コーデの削除 |
+| `/api/suggestions` | GET | 自動コーデ提案一覧（ルールベース or AI） |
+| `/api/suggestions/:id` | GET | 提案されたコーデ詳細 |
+| `/api/suggestions/:id/save` | POST | 提案コーデをお気に入りに保存（Outfitとして登録） |
+
+
+
+
+
 
