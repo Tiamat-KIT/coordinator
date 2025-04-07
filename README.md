@@ -1,6 +1,21 @@
 # coordinator
 ## 実装すべき機能について
-
+<style>
+  atricle {
+    display: flex
+  }
+</style>
+<article>
+  <section>
+    
+  </section>
+  <section>
+    
+  </section>
+  <section>
+    
+  </section>
+</article>
 ### ユーザ関連機能
 - ユーザの登録・ログイン・ログアウト
 
