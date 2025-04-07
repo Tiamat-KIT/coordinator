@@ -1,10 +1,12 @@
 # coordinator
 ## 実装すべき機能について
+
 <style>
   atricle {
     display: flex
   }
 </style>
+
 <article>
   <section>
     
